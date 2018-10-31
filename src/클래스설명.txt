@@ -1,0 +1,27 @@
+# 수정기록
+	 - 1998년 8월 25일 : CAI30,CAI50 추가.
+
+
+
+CBall       : 공 각자의 객체
+CBoardView  : CBoard 를 보여주며, 타이머를 이용 CBoard를 주기적으로 호출
+             CJDRDoc 에 속한다.
+CControlDlg : 사용자 입력을 CBoardView 에 전달.
+CPoint3     : x,y,z double 형 좌표 
+
+CBoard      : CBall 4개를 가지며 CBall을 호출.
+
+
+
+CAI30		: CBoardView의 멤버 변수로 사용.  현재의 보드(CBoard)를 가지고 어떻게 공을 칠것인가를
+				결정한다.
+CAI50		: CAI30을 상속 받아서 좀더 정교한 AI수행.
+
+CDib        : 미사용.
+CSWatch     : 미사용.
+
+
+타이머 호출 순서 :
+
+time -> CBoardView 호출 -> CBoard.DoStep() 호출 -> CBall.DoMove() 호출
+
